@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Discount Ascii Warehouse</title>
+
+        <!-- Angular -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
+
+        <!-- Yahoo Pure grid -->
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+
+        <!-- AsApp application -->
+        <script type="text/javascript" src="app.js"></script>
+        <link rel="stylesheet" type="text/css" href="app.css">
+
+    </head>
+    <body ng-app="asApp" ng-controller="mainCtrl" scroll>
+        <header>
+            <h1>Discount Ascii Warehouse</h1>
+        </header>
+
+        <section  class="products">
+
+            <div class="pure-g asapp-row asapp-header">
+                <div class="pure-u-2-24 asapp-td" ng-click="loading=true;init('id')">
+                    <span>id</span>&nbsp;<span ng-if="params.sort=='id'&&products.length">&#9660;</span>
+                </div>
+                <div class="pure-u-12-24 asapp-td">
+                    <span>item</span>
+                </div>
+                <div class="pure-u-2-24 asapp-td" ng-click="loading=true;init('size')">
+                    <span>size</span>&nbsp;<span ng-if="params.sort=='size'&&products.length">&#9660;</span>
+                </div>
+                <div class="pure-u-2-24 asapp-td" ng-click="loading=true;init('price')">
+                    <span>price</span>&nbsp;<span ng-if="params.sort=='price'&&products.length">&#9660;</span>
+                </div>
+                <div class="pure-u-6-24 asapp-td">
+                    <span>added to catalogue</span>
+                </div>
+            </div>
+
+            <div class="asapp-item" ng-repeat="product in products track by $index">
+                
+                <!-- Normal item -->
+                <div class="pure-g asapp-row">
+                    <div class="pure-u-2-24 asapp-td">{{product.id.split('-')[0]}}</div>
+                    <div class="pure-u-12-24 asapp-td"><span style="font-size:{{product.size}}px;">{{product.face}}</span></div>
+                    <div class="pure-u-2-24 asapp-td">{{product.size}} px</div>
+                    <div class="pure-u-2-24 asapp-td">{{product.price | currency:$USD}}</div>
+                    <div class="pure-u-6-24 asapp-td">{{product.date | fuzzyDate}}</div>
+                </div>
+
+                <!-- Cat Ad -->
+                <div class="pure-g asapp-row asapp-ad" ng-if="$index/ad_frequency%1==0 && $index!=0" ng-init="i=$index/ad_frequency-1">
+                    <div class="pure-u-1-1 asapp-td">
+                        <img adload="{{$index/ad_frequency-1}}" ng-src="/ad?r={{ads[i].random}}" alt="Advert no.: {{ads[i].random}}">
+                    </div>
+                </div>
+
+            </div>
+
+            <div ng-show="loading" class="loader fadein">
+                <div class="spinner"></div>
+                <small>Loading...</small>
+            </div>
+
+        </section>
+
+    </body>
+</html>
