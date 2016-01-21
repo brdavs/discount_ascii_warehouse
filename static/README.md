@@ -1,7 +1,7 @@
 About the solution
 ==================
 
-This is a quick solution to the task with minimal codebase (<200 lines with comments), minimal dependencies and, fast, slick UX. The focus of development was speed, size and maintainability of code with minimal external dependencies.
+This is a quick solution to the task with minimal codebase (<200 lines with comments), minimal dependencies and, fast, slick UX. The focus of development was speed, size and maintainability of code.
 
 Running the project
 -------------------
