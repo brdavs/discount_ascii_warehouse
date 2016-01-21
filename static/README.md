@@ -1,8 +1,8 @@
 About the solution
 ==================
 
-Running
--------
+Running the project
+-------------------
 
 1. Clone the repo, make sure you have node.js properly setup. (https://github.com/creationix/nvm can solve this.)
 2. Enter the directory 
