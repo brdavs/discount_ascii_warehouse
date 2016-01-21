@@ -4,7 +4,7 @@ About the solution
 Running the project
 -------------------
 
-1. Clone the repo, make sure you have node.js properly setup. (https://github.com/creationix/nvm can solve this.)
+1. Clone the repo (```git clone https://github.com/brdavs/discount_ascii_warehouse.git```), make sure you have node.js properly setup. (https://github.com/creationix/nvm can solve this for you.)
 2. Enter the directory 
 3. Run ```npm install``` to install the libraries, needed to run serverside code to node_modules directory.
 4. Run ```node index.js```
