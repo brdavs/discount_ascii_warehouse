@@ -1,6 +1,8 @@
 About the solution
 ==================
 
+This is a quick solution to the task with minimal codebase (<200 lines with comments), minimal dependencies and, fast, slick UX.
+
 Running the project
 -------------------
 
@@ -18,3 +20,4 @@ Notes
 - The project being so tiny, I intentionally left it in one js file. Larger projects can be split in files and directories, but the exact schema depends on the type of project. Many solutions are available on github.
 - I would not put this in production environment, because of recursive iteration through a random selection of ads. This is a bad principle server side.
 - I used external CDN for angular and pure.io, which I would avoid in production environment.
+- The ~ end of catalogue ~ will not occur, because product IDs just increase perpetually. I am not checking product/price/size to eliminate duplicates. I assume every ID has it's own product, even if it's a duplicate.
