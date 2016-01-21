@@ -6,8 +6,8 @@ Running
 
 1. Clone the repo, make sure you have node.js properly setup. (https://github.com/creationix/nvm can solve this.)
 2. Enter the directory 
-3. Run 'npm install' to install the libraries, needed to run serverside code to node_modules directory.
-4. Run node index.js
+3. Run ```npm install``` to install the libraries, needed to run serverside code to node_modules directory.
+4. Run ```node index.js```
 5. Point your browser to http://localhost:8001 (or change the port setting in install.js)
 
 Notes
