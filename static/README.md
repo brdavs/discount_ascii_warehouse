@@ -5,12 +5,12 @@ This is a quick solution to the task with minimal codebase (<200 lines with comm
 
 Running the project
 -------------------
-
-1. Clone the repo (```git clone https://github.com/brdavs/discount_ascii_warehouse.git```), make sure you have node.js properly setup. (https://github.com/creationix/nvm can solve this for you.)
-2. Enter the directory 
-3. Run ```npm install``` to install the libraries, needed to run serverside code to node_modules directory.
-4. Run ```node index.js```
-5. Point your browser to http://localhost:8001 (or change the port setting in install.js)
+1. Set up node.js environment. https://github.com/creationix/nvm can solve this for you.
+2. Clone the repo (```git clone https://github.com/brdavs/discount_ascii_warehouse.git```), or download the repo's zip.
+3. Enter the directory you have created.
+4. Run ```npm install``` to install the libraries, needed to run serverside code to node_modules directory.
+5. Run ```node index.js```.
+6. Point your browser to http://localhost:8001 (you can change the port setting in install.js).
 
 Notes
 -----
